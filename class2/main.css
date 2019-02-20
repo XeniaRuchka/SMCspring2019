@@ -1,9 +1,25 @@
+body {
+    margin: 0px;
+}
+
 .container {
     background-color: rgb(122, 135, 170);
+    width: 100%;
+    min-height: 300px;
 }
 
 @media(min-width: 768px){
     .container {
-        background-color: bisque;
+        background-color: rgb(209, 172, 127);
+        width: 750px;
+        margin: 0px auto;
     }
 }
+
+@media(min-width: 992px){
+    .container {
+        background-color: rgb(221, 153, 146);
+        width: 960px;
+    }
+}
+
