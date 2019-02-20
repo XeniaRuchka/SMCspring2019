@@ -1,0 +1,9 @@
+.container {
+    background-color: rgb(122, 135, 170);
+}
+
+@media(min-width: 768px){
+    .container {
+        background-color: bisque;
+    }
+}
