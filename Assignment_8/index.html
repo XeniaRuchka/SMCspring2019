@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+</head>
+<body id="bod">
+  <h1><em>BUTTONS</em></h1>
+
+  <div id = "div1" class = "blackBack">
+    <b>Hot</b>
+  </div>
+
+  <div id = "div2" class = "whiteBack">
+    <b>Cold</b>
+  </div>
+  
+  <input type = "button" value = "CLICK ME!!" onclick = "sendAlert()" id = "b1">
+
+  <input type = "button" value = "Change Color" onclick = "changeColor()" id = "b2">
+  
+  <input type = "button" value = "Change Text" onclick = "changeText()" id = "b3">
+  
+  <input type = "button" value = "PURPLE" onclick = "changeBack()" id = "b4">
+  
+
+   <script>
+function sendAlert(){
+  var choice = confirm('This button works!');
+ if(choice){
+    var message = "You pressed OK!";
+    alert(message);
+  }
+  else{
+    message = "Are you sure you want to cancel?";
+    alert(message);
+  }
+}
+
+function changeColor(){
+  var d1 = document.getElementById("div1");
+  var d2 = document.getElementById("div2");
+  
+  if(d1.className == "whiteBack"){
+    d1.className = "blackBack";
+    d2.className = "whiteBack";
+  }
+  else{
+    d1.className = "whiteBack";
+    d2.className = "blackBack";
+  }
+}
+
+function changeText(){
+  var d1 = document.getElementById("div1");
+  var d2 = document.getElementById("div2");
+  
+  if(d1.innerHTML == "<b>Cold</b>"){
+    d1.innerHTML = "<b>Hot</b>";
+    d1.style.color = "red";
+    d2.innerHTML = "<b>Cold</b>";
+    d2.style.color = "blue";
+  }
+  else{
+    d1.innerHTML = "<b>Cold</b>";
+    d1.style.color = "blue";
+    d2.innerHTML = "<b>Hot</b>";
+    d2.style.color = "red";
+  }
+}
+
+function changeBack(){
+  var body = document.getElementById("bod");
+  var button4 = document.getElementById("b4");
+  
+  if(b4.value=="PURPLE"){
+    body.style.backgroundColor="purple";
+    b4.value="Change back";
+  }
+  else{
+    body.style.backgroundColor="white";
+    b4.value="PURPLE";
+  }
+  
+}
+   </script> 
+</body>
+

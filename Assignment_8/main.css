@@ -1,0 +1,29 @@
+#bod{
+    font-family: "Courier New", Courier, monospace;
+    background-color: white;
+  }
+  
+  div{
+    font-size: 20pt;
+    width: 55pt;
+    padding: 5pt;
+    margin: 10pt;
+    border: 2px solid lightsteelblue;
+    text-align: center;
+  }
+  
+  #div1{
+    color: red;
+  }
+  
+  #div2{
+    color: blue;
+  }
+  
+  .blackBack{
+    background-color: black;
+  }
+  
+  .whiteBack{
+    background-color: white;
+  }
