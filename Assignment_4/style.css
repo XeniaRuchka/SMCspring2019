@@ -1,0 +1,29 @@
+@import url(https://fonts.googleapis.com/css?family=Bitter); 
+.content {
+    margin: auto;
+    padding: 0px 10px;
+    min-height: 572px;
+    border-bottom: 2px solid darkorchid;
+    position: relative;
+}
+
+.content .img-container {
+    margin: auto;
+    min-height: 160px;
+}
+
+body {
+    background-image: url("https://previews.123rf.com/images/vectorinka/vectorinka1608/vectorinka160800076/61249948-feathers-boho-seamless-pattern-tribal-ethnic-background-texture-clothing-design-wallpaper-wrapping-v.jpg");
+    background-repeat: repeat;
+}
+
+.content img {
+    margin: auto;
+    max-width: 100%;
+}
+
+h1 {
+text-align: center;
+font-size: 30pt;
+font-family: Bitter;
+}
