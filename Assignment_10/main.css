@@ -14,7 +14,7 @@
   
   #myInput {
     border-box: box-sizing;
-    background-image: url('searchicon.png');
+    background-image: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-512.png');
     background-position: 14px 12px;
     background-repeat: no-repeat;
     font-size: 16px;
@@ -35,7 +35,7 @@
     position: absolute;
     background-color: #f6f6f6;
     min-width: 230px;
-    overflow: auto;
+    
     border: 1px solid #ddd;
     z-index: 1;
   }
@@ -49,7 +49,8 @@
   
   .dropdown a:hover {background-color: #ddd;}
   
-  .show {display: block;
+  .show {
+    display: block;
   }
 
   .dropdown-submenu {
@@ -61,3 +62,43 @@
     left: 100%;
     margin-top: -1px;
   }
+
+  ul {
+      
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background: #1bc2a2;
+    }
+    
+
+
+
+  li ul { 
+     display: none; 
+    }
+
+  ul li a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #fff;
+  }
+
+  ul li a:hover { 
+    background: #1bc2a2; 
+}
+
+li:hover > ul {
+    display: block;
+    position: absolute;
+  }
+  
+  li:hover li { float: none; }
+  
+  li:hover a { background: #b7c21b; }
+  
+  li:hover li a:hover { background: #1bc2a2; }
+
+    
