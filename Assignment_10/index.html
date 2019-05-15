@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrays</title>
+
+
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Vegetables</button>
+          <div id="myDropdown" class="dropdown-content">
+          <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                <ul class="dropdown-menu">
+                          <li class="dropdown-submenu">
+                          <a class="test" tabindex="-1" href="#">Leafy green <span class="leafyGreen"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">Lettuce</a></li>
+                            <li><a tabindex="-1" href="#">Spinach</a></li>
+                            <li><a tabindex="-1" href="#">Silverbeet</a></li>
+                          </ul></li>
+                          <li class="dropdown-submenu">  
+                          <a class="test" tabindex="-1" href="#">Cruciferous <span class="cruciferous"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">Cabbage</a></li>
+                            <li><a tabindex="-1" href="#">Cauliflower</a></li>
+                            <li><a tabindex="-1" href="#">Brussels sprouts</a></li>
+                            <li><a tabindex="-1" href="#">Broccoli</a></li>
+                          </ul></li>
+                          <li class="dropdown-submenu">
+                          <a class="test" tabindex="-1" href="#">Marrow <span class="marrow"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">Pumpkin</a></li>
+                            <li><a tabindex="-1" href="#">Cucumber</a></li>
+                            <li><a tabindex="-1" href="#">Zucchini</a></li>
+                          </ul></li>
+                          <li class="dropdown-submenu">
+                          <a class="test" tabindex="-1" href="#">Root <span class="root"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">Potato</a></li>
+                            <li><a tabindex="-1" href="#">Sweet potato</a></li>
+                            <li><a tabindex="-1" href="#">Yam</a></li>
+                          </ul></li>
+                          <li class="dropdown-submenu">  
+                          <a class="test" tabindex="-1" href="#">Edible plant stem <span class="ediblePlantStem"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">Celery</a></li>
+                            <li><a tabindex="-1" href="#">Asparagus</a></li>
+                          </ul></li>
+                          <li class="dropdown-submenu">  
+                          <a class="test" tabindex="-1" href="#">Allium <span class="allium"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">Onion</a></li>
+                            <li><a tabindex="-1" href="#">Garlic</a></li>
+                            <li><a tabindex="-1" href="#">Shallot</a></li>
+                          </ul></li>                                   
+
+                              
+                            
+                        
+                </ul>   
+
+          </div>
+        </div>   
+
+    <main>
+        <h1>Which type of vegetables would you like to see?</h1>
+
+        <form action="" method="POST">
+            <label for="carMake">Car Make:</label>
+            <select name="make" id="carMake">
+                <option value="audi">Audi</option>
+                <option value="bmw">BMW</option>
+                <option value="merc">Mercedes</option>
+                <option value="porsche">Porsche</option>
+            </select>
+
+            <label for="carModel">Model</label>
+            <select name="model" id="carModel"></select>
+        </form>
+    </main>
+
+
+<script>
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+
+        var audiModels      = ["S3", "S5", "S7"];
+        var bmwModels       = ["Series-3", "Series-4", "Series-5", "Series-7"];
+        var mercModels      = ["C-class", "E-class", "S-class"];
+        var porscheModels   = ["911", "Macan", "Panamera", "Cayenne"];
+        var makeDropdown = document.getElementById("carMake");
+        var modelDropdown = document.getElementById("carModel");
+        makeDropdown.addEventListener("change", function(){
+            console.log(this.value);
+            modelDropdown.innerHTML = "";
+            
+            if(this.value === "audi"){
+                for(var i = 0; i < audiModels.length; i++){
+                    modelDropdown.innerHTML += '<option value="' + audiModels[i] + '">' + audiModels[i] + '</option>';
+                }  
+            } else if(this.value === 'bmw'){
+                for(var i = 0; i < bmwModels.length; i++){
+                    modelDropdown.innerHTML += '<option value="' + bmwModels[i] + '">' + bmwModels[i] + '</option>';
+                }
+            } else if(this.value === 'merc'){
+                for(var i = 0; i < mercModels.length; i++){
+                    modelDropdown.innerHTML += '<option value="' + mercModels[i] + '">' + mercModels[i] + '</option>';
+                }
+            } else if(this.value === 'porsche'){
+                for(var i = 0; i < porscheModels.length; i++){
+                    modelDropdown.innerHTML += '<option value="' + porscheModels[i] + '">' + porscheModels[i] + '</option>';
+                }
+            }
+            
+            //modelDropdown.innerHTML += '<option value="' + bmwModels[0] + '">' + bmwModels[0] + '</option>';
+            //modelDropdown.innerHTML += '<option value="' + bmwModels[1] + '">' + bmwModels[1] + '</option>';
+            //modelDropdown.innerHTML += '<option value="' + bmwModels[2] + '">' + bmwModels[2] + '</option>';
+            //modelDropdown.innerHTML += '<option value="' + bmwModels[3] + '">' + bmwModels[3] + '</option>';
+            // <option value=" + text + "> + Text + </option>
+            
+        });
+    </script>
+</body>
+</html>
