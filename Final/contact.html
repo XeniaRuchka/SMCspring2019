@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Institute For Cinema Studies</title>
+<link rel="icon" href="img/logo2.png" width="64" height="64">
+<meta charset="utf-8">
+<script src="js/jquery.tools.min.js"></script>
+<link rel="stylesheet" href="styles/reset.css" type="text/css">
+<link rel="stylesheet" href="styles/styl.css" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="header">
+  <div id="header_in">
+    <h1><a href="index.html"><b><img src="img/logo.png" alt="logo"></b></a></h1>
+    <div id="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="donation.html">Donation</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="main_part_inner">
+  <div id="main_part_inner_in">
+    <h2>Contact</h2>
+    <div class="button_main"> <a href="#" class="button_dark">DONATE</a> </div>
+  </div>
+</div>
+<div id="content_inner">
+  <h3>Leave a message</h3>
+  <form action="#" method="post" class="formit">
+    <input type="text" name="name" placeholder="YOUR NAME">
+    <input type="text" name="email" placeholder="EMAIL">
+    <input type="text" name="url" placeholder="SUBJECT (OPTIONAL)">
+    <textarea name="message" placeholder="Leave your message here..."></textarea>
+    <input type="submit" class="button_submit" value="SEND A MESSAGE">
+  </form>
+  <div class="cara"></div>
+  <h3>Contact information</h3>
+  <div class="contactinfo"> <span class="ico_mapmark"><b>2633 Lincoln Blvd, # 500 Santa Monica, California 90405</b></span> </div>
+  <div class="contactinfo"> <span class="ico_message"><b>info@isc.com</b></span> </div>
+  <div class="contactinfo"> <span class="ico_iphone"><b>(+123) 456 789 012</b></span> </div>
+  <hr class="cleanit">
+  <div class="mapit">
+    <iframe width="938" height="360" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.453888567578!2d-118.47685298479233!3d34.00655848061832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bad76df0b1dd%3A0x85c894e414d35348!2s2633+Lincoln+Blvd+%23500%2C+Santa+Monica%2C+CA+90405!5e0!3m2!1sru!2sus!4v1558990044900!5m2!1sru!2sus"> </iframe>
+  </div>
+</div>
+<hr class="cleanit">
+<div id="footer">
+  <div id="footer_in">
+    <p>Copyright &copy; 2019 <a href="#">INSTITUTE FOR CINEMA STUDIES</a>. All Rights Reserved</p>
+    <span>Design By: <a href="">Xenia Ruchka</a></span></div>
+</div>
+<script>
+$(function () {
+    $("ul.controls").tabs("div.testimonials > div");
+});
+</script>
+</body>
+</html>
