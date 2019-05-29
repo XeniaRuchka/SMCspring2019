@@ -182,3 +182,24 @@ sup {
 svg {
   overflow: hidden;
 }
+
+@media only screen and (max-width: 850px) {
+  
+ .header {
+   width: 100%;
+ }
+
+ .main_part_in {
+  position: absolute; 
+  display: block;
+  margin: auto;
+  width: 50%;
+ }
+
+ .thirds {
+  margin: auto; 
+  display:table; 
+  width:100%;
+  column-count: 1;
+ }
+}
