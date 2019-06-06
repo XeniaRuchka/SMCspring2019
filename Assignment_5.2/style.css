@@ -1,0 +1,77 @@
+body {
+    background-color: #3c3c3d;
+    font-family: verdana, sans-serif;
+  }
+  #example-grid {
+    width: 100%;
+  }
+  #example-grid .align-box {
+    height: 250px;
+    background-color: #1e6291;
+  }
+  #example-grid .align-box.center {
+    background-color: #1c5985;
+  }
+  #example-grid .align-box.right {
+    background-color: #195178;
+  }
+  #example-grid .column {
+    width: 33.3%;
+    padding: 34px;
+    background-color: #fff;
+  }
+  .align-box {
+    position: relative;
+    overflow: hidden;
+    clear: both;
+    text-align: left;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /* The ghost, nudged to maintain perfect centering */
+    /* Center Column Content */
+    /* Right Align Column Content */
+  }
+  .align-box img {
+    max-width: 100%;
+  }
+  .align-box > .align-box {
+    position: static;
+  }
+  .align-box:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -1px;
+    /* Adjusts for spacing */
+  }
+}
+  @media screen and (max-width: 767px) {
+    .align-box.collapse .column {
+      display: block;
+      width: 100% !important;
+  
+    }
+  }
+  .align-box.center {
+    text-align: center;
+  }
+  .align-box.right {
+    text-align: right;
+  }
+  .align-box .column {
+    margin-left: -0.34em;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    /* Vertically Center */
+    /* Vertically Bottom */
+  }
+  .align-box .column.middle {
+    vertical-align: middle;
+  }
+  .align-box .column.bottom {
+    vertical-align: bottom;
+  }
+  
